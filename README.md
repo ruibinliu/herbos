@@ -1,3 +1,4 @@
+```bash
 # install dependencies
 pip install lerobot
 pip install imageio-ffmpeg
@@ -67,6 +68,7 @@ lerobot-record  `
   # --teleop.type=so100_leader `
   # --teleop.port=/dev/ttyACM0 `
   # --teleop.id=my_awesome_leader_arm `
+```
 
 
 
