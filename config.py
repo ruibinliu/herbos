@@ -1,0 +1,7 @@
+# Web service
+HOST = "0.0.0.0"
+PORT = 5000
+
+# Robot config
+ROBOT_FOLLOWER_PORT = "COM6"
+ROBOT_LEADER_PORT = "COM5"

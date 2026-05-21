@@ -1,3 +1,27 @@
+# HerbOS
+
+
+## Install
+```bash
+# create python virtual environment for the project
+pythom -m venv .venv
+
+# activate the virtual environment
+# windows:
+.venv/Scripts/activate
+# linux:
+.venv/bin/activate
+
+# install project dependencies
+pip install -r requirements.txt
+```
+
+## Run
+```bash
+python app.py 
+```
+
+## Lerobot skills
 ```bash
 # install dependencies
 pip install lerobot
@@ -44,7 +68,7 @@ lerobot-record `
 lerobot-train `
   --dataset.repo_id=${HF_USER}/record-test `
   --policy.type=act `
-  --output_dir=outputs/train/act_record_test `
+  --output_dir=datasets/train/act_record_test `
   --job_name=act_record-test `
   --policy.device=cuda `
   --wandb.enable=true `
@@ -69,6 +93,3 @@ lerobot-record  `
   # --teleop.port=/dev/ttyACM0 `
   # --teleop.id=my_awesome_leader_arm `
 ```
-
-
-
