@@ -4,6 +4,7 @@ import threading
 from config import ROBOT_FOLLOWER_PORT, ROBOT_LEADER_PORT
 from herbos.core.events import emit_log
 from herbos.core.events import emit_status
+from runtime.lerobot import LeRobotRuntime
 
 
 class TeleopRuntime:
@@ -79,3 +80,4 @@ class TeleopRuntime:
         emit_status(robot_state="Idle")
 
         emit_log("Teleop stopped")
+

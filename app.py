@@ -4,6 +4,7 @@ from queue import Queue
 
 from herbos.core.events import init_events, emit_log
 from herbos.robot.worker import RuntimeWorker
+from runtime.lerobot import start_teleop, stop_runtime
 from runtime.teleop import TeleopRuntime
 
 from config import HOST, PORT
@@ -38,14 +39,14 @@ def run_skill(data):
 @socketio.on("start_teleop")
 def start():
     print("start teleop")
-    teleop.start()
+    start_teleop()
     emit_log("teleoperation started")
 
 
 @socketio.on("stop_teleop")
 def stop():
     print("stop teleop")
-    teleop.stop()
+    stop_runtime()
     socketio.emit("status", {
         "message": f"teleoperation stopped"
     })

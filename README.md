@@ -4,7 +4,7 @@
 ## Install
 ```bash
 # create python virtual environment for the project
-pythom -m venv .venv
+python -m venv .venv
 
 # activate the virtual environment
 # windows:
@@ -51,7 +51,8 @@ lerobot-record `
     --robot.type=so101_follower `
     --robot.port=COM6 `
     --robot.id=my_awesome_follower_arm `
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 15}}" `
+    --robot.cameras="{ right: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 15},
+                       front: {type: opencv, index_or_path: 3, width: 640, height: 480, fps: 15}}" `
     --teleop.type=so101_leader `
     --teleop.port=COM5 `
     --teleop.id=my_awesome_leader_arm `
